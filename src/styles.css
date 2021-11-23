@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import "materialize-css/dist/css/materialize.min.css";
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Padauk&display=swap');
+:root{
+    --font1:'EB Garamond', serif;
+    --font2:'Padauk', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    margin: 10px;
+background-color: #B655C8;
+}
+*{
+    font-family: var(--font2);
+}

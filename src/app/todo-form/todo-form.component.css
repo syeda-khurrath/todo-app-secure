@@ -1,0 +1,11 @@
+input[type=text] {
+    color: black;
+    font-weight: bold;
+    
+  }
+  .input-field input[type=text]:focus {
+    border-bottom: 2px solid #B655C8;
+  }
+  ::placeholder{
+      color: grey;
+  }

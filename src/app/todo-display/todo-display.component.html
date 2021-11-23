@@ -1,0 +1,25 @@
+<div class="container" style="margin: auto; max-width: fit-content">
+  <h6 *ngIf="todoList.length === 0">Don't worry ! you don't have any Tasks</h6>
+  <h6 *ngIf="todoList.length > 1">
+    You have {{ todoList.length }} Tasks in your Bucket !
+  </h6>
+  <div class="row">
+    <div *ngFor="let item of todoList" class="z-depth-4 item-style col s12" [ngClass]="{'slide':click}" >
+        <label style="display: inline">
+          <input
+            type="checkbox"
+            [checked]="item.completed"
+            (click)="change(item)"
+          />
+          <span></span>
+        </label>
+        <p style="display: inline" class="item-text">{{ item.name | titlecase }}</p>
+    
+        <button class="btn red right" (click)="delete(item)">delete</button>
+        <div class="col s12" style="padding: 10px;">
+          <p class="right">{{ item.date }}</p>
+        </div>
+      </div>
+  </div>
+ 
+</div>
